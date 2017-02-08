@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<WekiInputHelperFileData>
+  <oscReceivePort>6448</oscReceivePort>
+  <oscSendPort>6449</oscSendPort>
+  <sendHostname>localhost</sendHostname>
+  <sendOscMessage>/wek/inputs</sendOscMessage>
+  <inputs>
+    <oscMessage>/wek/inputs</oscMessage>
+    <numInputs>12</numInputs>
+    <groupName>Inputs</groupName>
+    <inputNames>
+      <string>face_found</string>
+      <string>poseScale</string>
+      <string>posePosition_x</string>
+      <string>poseOrientation_x</string>
+      <string>mouthWidth</string>
+      <string>mouthHeight</string>
+      <string>eyeleft</string>
+      <string>eyeRight</string>
+      <string>eyebrowLeft</string>
+      <string>eyebrowRight</string>
+      <string>jaw</string>
+      <string>nostrils</string>
+    </inputNames>
+  </inputs>
+  <outputs>
+    <outputs class="linked-list"/>
+    <numOutputTypes>0</numOutputTypes>
+    <dimensionality>0</dimensionality>
+    <hasDependencies>false</hasDependencies>
+  </outputs>
+  <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
+    <c>
+      <type>GREATER_THAN</type>
+      <howLong>REPEAT</howLong>
+      <index>0</index>
+      <val>0.0</val>
+      <appliesTo>INPUT</appliesTo>
+    </c>
+  </inputTriggerer>
+  <isSendingOriginalInputs>true</isSendingOriginalInputs>
+</WekiInputHelperFileData>
