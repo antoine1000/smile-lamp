@@ -1,8 +1,17 @@
+// Import Arduino library
+import cc.arduino.*;
+import org.firmata.*;
+import processing.serial.*;
+
 import oscP5.*;
 import netP5.*;
 OscP5 oscP5;
 OscP5 oscP5Receiver;
 NetAddress sending;
+Arduino arduino;
+
+// Led serial
+int ledPin = 13;
 
 // number of faces found
 int found;
@@ -33,6 +42,10 @@ void setup() {
 	
   size(640, 480);
   frameRate(30);
+  
+  //println(Arduino.list());
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino.pinMode(ledPin, Arduino.OUTPUT);
  
 /* instantiating oscP5, listening to OSC messages *coming* from port 8338, default port on FaceOSC */
   oscP5 = new OscP5(this, 8338);
@@ -60,7 +73,9 @@ void draw() {
   
   if(mySmile >= 150) {
    red = 0;
+   arduino.digitalWrite(ledPin, Arduino.HIGH);
   } else {
+   arduino.digitalWrite(ledPin, Arduino.LOW);
    red = 255;
    }
    
