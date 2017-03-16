@@ -2,12 +2,16 @@
 <h1 align="center">The Smile Lamp</h1>
 <h3 align="center">Switch on a lamp with your smile ! 😀💡</h3>
 
+<p align="center">
+  <img src="https://github.com/antoine1000/smile-lamp/blob/master/Lamp%20Design/smile_lamp_1.gif" alt="logo">
+</p>
 
-###Goal
+
+### Goal
 
 Create a desk lamp that switch on when you smile.
 
-###Technologies
+### Technologies
 
 - ~~Raspberri Pi 3~~ Laptop
 - ~~RPi Camera Module (v2)~~ Webcam
@@ -16,12 +20,12 @@ Create a desk lamp that switch on when you smile.
 - Rhino 3D
 - Ultimaker 3D Printer
 
-###To Do
+### To Do
 
 - [x] Make our own lamp foots
 - [x] Switch on a LED when smiling
 - [ ] Make a Raspberri Pi or autonomous face recognition, put it inside the lamp
-- [ ] Make a custom lampshade that includes Arduino and/or Raspberrypi inside
+- [x] Make a custom lampshade that includes Arduino and/or Raspberrypi inside
 - [ ] Add a 220V relay in order to use a real bulb inside the lamp
 
 
